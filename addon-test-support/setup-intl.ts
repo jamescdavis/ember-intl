@@ -71,7 +71,7 @@ export default function setupIntl(
       this.owner.register('util:intl/missing-message', missingMessage);
     }
 
-    this.intl = this.owner.lookup('service:intl');
+    this.intl = this.owner.lookup('service:intl') as IntlService;
 
     if (options?.formats) {
       this.intl.set('formats', options.formats);

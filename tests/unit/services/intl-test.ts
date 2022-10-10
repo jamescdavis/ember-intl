@@ -18,7 +18,7 @@ module('service:init initialization', function (hooks) {
     const setLocale = td.func();
     const Intl = this.owner.factoryFor('service:intl');
 
-    Intl.create({ setLocale });
+    Intl?.create({ setLocale });
     assert.verify(setLocale([LOCALE]));
   });
 });
